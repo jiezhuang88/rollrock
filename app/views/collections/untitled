@@ -1,0 +1,55 @@
+<div class="brandtitle">
+<strong>ROLLROCK</strong>
+</div>
+<div class="language">Language</div>
+<div class="wrapper">
+<div id="menu" class="menuleftcontent">
+   <div id="menu1" class="menuTree">
+        <ul>
+            <li class="parent">
+                <%= link_to "COLLECTIONS"%>
+                <a href="#">COLLECTIONS</a>
+                <ul>
+                    <li class="parent"><a href="#">love after war 2012aw</a>
+                        <ul> 
+                          <li class="child"><a href="#">ADAMANT</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="parent"><a href="#">Metamorphosis 2012ss</a></li>
+                    <ul>
+                    <li class="child"><a href="#">-lfw</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li class="parent"><a href="#">Cars</a>
+                <ul>
+                    <li class="parent"><a href="#">VW</a>
+                        <ul>
+                            <li class="parent"><a class="parent" href="#">Golf</a>
+                                <ul>
+                                    <li class="child"><a href="#">GTI</a></li>
+                                    <li class="child"><a href="beline.htm">Berline</a></li>
+                                    <li class="child"><a href="break.htm">Break</a></li>
+                                </ul>
+                            </li>
+                            <li class="child"><a href="lupo.htm">Polo</a></li>
+                            <li class="child"><a href="polo.htm">Lupo</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent"><a href="#">Peugeot</a>
+                        <ul>
+                            <li class="child"><a href="207.htm">207</a></li>
+                            <li class="child"><a href="308.htm">308</a></li>
+                            <li class="child"><a href="407.htm">407</a></li>
+                        </ul>
+                    </li>
+                    <li class="child"><a href="#">Renault clio</a></li>
+                </ul>
+            </li>
+            <li class="child"><a href="#">Contact</a></li>
+        </ul>
+</div>
+</div>
+ <%= render :partial => "rightcontent",:object => @post%>
+</div>

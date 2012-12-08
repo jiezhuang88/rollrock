@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "hello world" %></title>
+    <link href="stylesheets/svwp_style.css?1349754459" media="screen" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/Styles.css?1349754459" media="screen" rel="stylesheet" type="text/css" />
+  <script src="javascripts/jquery-1.6.2.min.js?1349754459" type="text/javascript"></script>
+  <script src="javascripts/jquery.slideViewerPro.1.5.js?1349754459" type="text/javascript"></script>
+  <script src="javascripts/jquery.timers.js?1349754459" type="text/javascript"></script>
+  <script src="javascripts/JQuery.MenuTree.js?1349754459" type="text/javascript"></script>
+  <script src="javascripts/JQuery-ui.js?1349754459" type="text/javascript"></script>
+  <script src="javascripts/application.js" type="text/javascript"></script>
+
+
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<div class="rightcontent">
+<div id="flickit" class="svwp">
+    <ul>
+    	<% for asset in @assets  %>
+      <li><%= image_tag(asset.asset.url(:original),:style => "width:300px;heigth:250px",:alt => "shidunalt")%></li>
+       <% end %>
+  </div>
+</div>

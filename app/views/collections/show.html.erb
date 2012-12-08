@@ -1,0 +1,24 @@
+<div class="brandtitle">
+<strong>ROLLROCK</strong>
+</div>
+<div class="language">Language</div>
+<div class="wrapper">
+<div id="menu" class="menuleftcontent">
+   <div id="menu1" class="menuTree">
+        <ul>
+            <%for post in @roots%>
+            <li class="parent"><a href="collections/<%=post.id%>"><%=post.title%></a>
+                <% unless post.children.blank? %>
+                <ul>
+                    <% for child in post.children%>
+                    <li class="child"><a href="collections/<%=child.id%>"><%=child.title%></a></li>
+                     <%end%>
+                </ul>
+                <%end%>
+            </li>
+            <%end%>
+        </ul>
+</div>
+</div>
+<%= render :partial => "rightcontent",:object => Post.first.assets%>
+</div>

@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ttile:</b>
+  <%= @asset.ttile %>
+</p>
+<p>  
+  <%= image_tag @asset.data.url() %>  
+</p> 
+
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

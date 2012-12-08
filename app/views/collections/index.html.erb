@@ -1,0 +1,120 @@
+<div class="brandtitle">
+<strong>ROLLROCK</strong>
+</div>
+
+<div class="wrapper">
+<div id="menu" class="menuleftcontent">
+   <div id="menu1" class="menuTree">
+        <ul>
+            <%for post in @roots%>
+           
+            <li class="parent"><a rel="get_async?id=<%=post.id%>" href="#"><%=post.title%></a>
+                <% unless post.children.blank? %>
+                <ul>
+                    <% for child in post.children%>
+                    <li class="child"><a rel="get_async?id=<%=child.id%>" href="#"><%=child.title%></a></li>
+                     <%end%>
+                </ul>
+                <%end%>
+            </li>
+            <%end%>
+        </ul>
+    </div>
+</div>
+
+
+<div class="rightcontent" id="rightcontent">
+
+  <div id="flickit" class="svwp">
+    
+   <ul>
+      <li><img alt="This photo was taken on March 14, 2010 using a Nokia 5220 XpressMusic" src="http://www.sassandbide.com/media/catalog/category/s_bide_ss13_010_6.jpg"></li>
+      <li><img alt="This photo was taken on March 14, 2010 using a Nokia 5220 XpressMusic" src="http://www.sassandbide.com/media/catalog/category/s_bide_ss13_010_6.jpg"></li>
+      <li><img alt="This photo was taken on March 14, 2010 using a Nokia 5220 XpressMusic" src="http://www.sassandbide.com/media/catalog/category/s_bide_ss13_010_6.jpg"></li>
+      <li><img alt="This photo was taken on March 14, 2010 using a Nokia 5220 XpressMusic" src="http://www.sassandbide.com/media/catalog/category/s_bide_ss13_010_6.jpg"></li>
+      <li><img alt="This photo was taken on March 14, 2010 using a Nokia 5220 XpressMusic" src="http://www.sassandbide.com/media/catalog/category/s_bide_ss13_010_6.jpg"></li>
+    </ul>
+
+
+
+  </div>
+</div>
+
+
+
+<!--
+<div id="flickit" class="svwp">
+    <ul>
+        <% for asset in @assets  %>
+      <li><%= image_tag(asset.asset.url(:original),:style => "width:300px;heigth:250px",:alt => "shidunalt")%></li>
+       <% end %>
+  </div>
+</div>
+-->
+
+<div class="language">Language</div>
+</div>
+
+<div id="footer">
+<address >sass & bide @2012 site by sisi</address>
+</div>
+
+
+<script type="text/javascript">
+$(window).bind('load', function() {
+   $('#menu1').menuTree({
+        parentMenuTriggerCallback: true
+    }, function(url){
+     // console.log(2, arguments, this);
+     $.get(url, {}, function(data) {
+        console.log(data);
+        if (data.status == 'success') {
+          var list = data.assets;
+          var html = '';
+          $.each(list, function(idx, v) {
+            var obj = v.asset || {};
+            html += '<li><img width="500" height="630" alt="'+obj.asset_file_name+'" src="/system/assets/'+obj.id+'/original/'+obj.asset_file_name+'" /></li>';
+          });
+          if (html) {
+            html = '<div id="flickit" class="svwp"><ul>'+ html + '</ul></div>';
+            $('#rightcontent').html(html);
+            initSlideView();
+            //$('#rightcontent').html('');
+            // console.log(html);
+          }
+          
+        } else {
+            alert('接口出错')
+        }
+    });
+   });
+
+
+   initSlideView();
+
+
+   function initSlideView() {
+        var node = $("#flickit"),
+            imgNode = node.find('img');
+
+        if (imgNode[0].complete || imgNode[0].readyState == 4) {
+            init();
+        } else {
+            imgNode.first().bind('load', init)
+        }
+
+        function init() {
+            node.slideViewerPro({
+                autoslide: true, 
+                shuffle: true,
+                asTimer: 5500, 
+                thumbsActiveBorderColor: "silver",
+                buttonsTextColor: "silver",
+                typo: true,
+                galBorderWidth: 0,
+                thumbsBorderOpacity: 0 
+            });
+        } 
+   }
+});
+</script>
