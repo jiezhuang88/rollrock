@@ -47,7 +47,7 @@
 </div>
 -->
 
-<div class="language">Language</div>
+<div class="language"></div>
 </div>
 
 <div id="footer">
@@ -68,7 +68,7 @@ $(window).bind('load', function() {
           var html = '';
           $.each(list, function(idx, v) {
             var obj = v.asset || {};
-            html += '<li><img width="500" height="630" alt="'+obj.asset_file_name+'" src="/system/assets/'+obj.id+'/original/'+obj.asset_file_name+'" /></li>';
+            html += '<li><img width="500" height="630" alt="" src="/system/assets/'+obj.id+'/original/'+obj.asset_file_name+'" /></li>';
           });
           if (html) {
             html = '<div id="flickit" class="svwp"><ul>'+ html + '</ul></div>';
