@@ -62,7 +62,7 @@ $(window).bind('load', function() {
     }, function(url){
      // console.log(2, arguments, this);
      $.get(url, {}, function(data) {
-        console.log(data);
+        // console.log(data);
         if (data.status == 'success') {
           var list = data.assets;
           var html = '';
