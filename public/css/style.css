@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+html, body { margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { border: 0 none; font-family: inherit; font-size: 100%; font-style: normal;font-weight: 400; line-height: 1; margin: 0; padding: 0;}
+ol, ul { list-style: none outside none;}
+q:before, q:after, blockquote:before, blockquote:after { content: "";}
+html { font-size: 100%;}
+a{ text-decoration:none;}
+.claer{ clear:both;}
+body{ background:#000; color:#ddd;}
+.doc{ background:url(../images/bg.png) no-repeat; width:1000px; margin:0 auto;}
+
+.music{ position:absolute; right:0;}
+.music a{ color:#ddd;}
+.music img{ display:block; float:left; width:32px; padding-right:5px;}
+.music p{ display:block; float:left;font-family:Arial; font-weight:bold; font-size:14px; line-height:32px; padding-right:10px;}
+
+.go-up{ position:fixed; right:10px; bottom:20px;}
+.go-up a{ display:block;}
+.go-up img{ width:40px;}
+
+.home{ position:relative; height:760px;}
+.home a{ display:block; float:left; color:#ddd; position:relative; float:left;}
+.home a p{ display:block; width:80px;}
+.home a h1{ display:block; margin:0; text-align:center; padding:0; font-size:14px; font-weight:bold;text-shadow: 0 1px 0 #333; font-family:"Microsoft YaHei", "微软雅黑";}
+.home a b{ font-size:12px; width:80px; display:block; text-align:center;text-shadow: 0 1px 0 #333; font-family:Arial; margin-top:3px;}
+.home .home_main{ left:150px; top:105px;}
+.home .home_main h1{ font-size:30px;}
+.home .home_main b{ font-size:24px;}
+.home .home_brand{left:-240px; top:290px;}
+.home .home_ad{left:-325px; top:480px;}
+.home .home_collection{right:-55px; top:480px;}
+.home .home_contact{right:70px; top:295px;}
+.home .home_main_pic{ background:url(../images/rock_1.png) no-repeat; width:263px; height:265px; left:265px; top:205px;}
+.home .home_brand_pic{ background:url(../images/rock_2.png) no-repeat; width:96px; height:95px; left:-220px; top:300px;}
+.home .home_ad_pic{ background:url(../images/rock_3.png) no-repeat; width:118px; height:103px; left:-300px; top:430px;}
+.home .home_collection_pic{ background:url(../images/rock_4.png) no-repeat; width:104px; height:90px;right:180px; top:440px;}
+.home .home_contact_pic{ background:url(../images/rock_5.png) no-repeat; width:134px; height:92px;right:50px; top:225px;}
+.home a:hover.home_main_pic{ background:url(../images/rock_1_hover.png) no-repeat; width:263px; height:265px; left:265px; top:205px;}
+.home a:hover.home_brand_pic{ background:url(../images/rock_2.png) no-repeat; width:96px; height:95px; left:-220px; top:302px;}
+.home a:hover.home_ad_pic{ background:url(../images/rock_3.png) no-repeat; width:118px; height:103px; left:-300px; top:432px;}
+.home a:hover.home_collection_pic{ background:url(../images/rock_4.png) no-repeat; width:104px; height:90px;right:180px; top:442px;}
+.home a:hover.home_contact_pic{ background:url(../images/rock_5.png) no-repeat; width:134px; height:92px;right:50px; top:227px;}
+
+.brand{ margin:110px 50px 0; height:605px;}
+.brand .title{ height:97px; width:100%;}
+.brand .title span{ display:block; float:right; width:100px; margin-top:20px;}
+.brand .title h2{ display:block; margin:0; width:100px; text-align:center; padding:0; font-size:30px; font-weight:bold;text-shadow: 0 1px 0 #333; font-family:"Microsoft YaHei", "微软雅黑";}
+.brand .title b{font-size:24px; width:100px; display:block; text-align:center; text-shadow: 0 1px 0 #333; font-family:Arial; margin-top:3px;}
+.brand .title i{ display:block; float:right; background:url(../images/rock_3.png) no-repeat; width:118px; height:97px;}
+.brand .txt{ height:210px; background:#1a1a1a; border-radius:10px; padding:65px 30px; margin:35px 10px 0; font-family:"Microsoft YaHei", "微软雅黑"; font-size:14px; }
+.brand .txt p{line-height:26px; text-indent:2em;}
+
+.ad{ margin:20px 60px 0; height:670px;}
+.ad .title{ height:90px; width:100%;}
+.ad .title span{ display:block; float:left; width:100px; margin-top:13px;}
+.ad .title h2{ display:block; margin:0; width:100px; text-align:center; padding:0; font-size:30px; font-weight:bold;text-shadow: 0 1px 0 #333; font-family:"Microsoft YaHei", "微软雅黑";}
+.ad .title b{font-size:24px; width:100px; display:block; text-align:center; text-shadow: 0 1px 0 #333; font-family:Arial; margin-top:3px;}
+.ad .title i{ display:block; float:left; background:url(../images/rock_2.png) no-repeat; width:96px; height:90px;}
+
+.collection{ margin:50px 60px 0; height:770px;}
+.collection .title{ height:85px; width:100%;}
+.collection .title span{ display:block; float:left; width:120px; margin-top:13px; padding-right:30px;}
+.collection .title h2{ display:block; margin:0; width:120px; text-align:center; padding:0; font-size:30px; font-weight:bold;text-shadow: 0 1px 0 #333; font-family:"Microsoft YaHei", "微软雅黑";}
+.collection .title b{font-size:24px; width:100px; display:block; text-align:center; text-shadow: 0 1px 0 #333; font-family:Arial; margin-top:3px;}
+.collection .title i{ display:block; float:left; background:url(../images/rock_4.png) no-repeat; width:104px; height:85px; padding-right:35px;}
+.collection p{ font-family:"Microsoft YaHei", "微软雅黑"; font-size:14px; border-bottom:1px solid #ddd; display:block; float:left; margin-top:20px;}
+.collection a{ color:#ddd; display:block; float:left; font-size:14px; padding:4px 15px;}
+.collection a:hover{ color:#000; background:#ddd;}
+.collection a.curr{color:#000; background:#ddd;}
+
+.contact{ margin:20px 50px 0; height:830px;}
+.contact .title{ height:87px; width:100%;}
+.contact .title span{ display:block; float:right; width:100px; margin-top:20px;}
+.contact .title h2{ display:block; margin:0; width:100px; text-align:center; padding:0; font-size:30px; font-weight:bold;text-shadow: 0 1px 0 #333; font-family:"Microsoft YaHei", "微软雅黑";}
+.contact .title b{font-size:24px; width:100px; display:block; text-align:center; text-shadow: 0 1px 0 #333; font-family:Arial; margin-top:3px;}
+.contact .title i{ display:block; float:right; background:url(../images/rock_5.png) no-repeat; width:134px; height:87px;}
+.contact .txt{ height:450px; background:#1a1a1a; border-radius:10px; padding:30px 30px; margin:35px 10px 0; font-family:"Microsoft YaHei", "微软雅黑"; font-size:14px; }
+.contact .txt p{line-height:26px;}
+.contact .txt a{ color:#ddd;}
+.contact .line{ height:1px; border-bottom:1px solid #ddd; overflow:hidden; margin-bottom:15px;}
+
+
